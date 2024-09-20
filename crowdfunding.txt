@@ -1,0 +1,31 @@
+####Crowdfunding
+Contacts
+------
+contact_id INTEGER PK
+first_name VARCHAR(30)
+last_name VARCHAR(30)
+email VARCHAR(60)
+Category
+---------
+category_id VARCHAR(10) PK
+category VARCHAR(30)
+Subcategory
+----------
+subcategory_id VARCHAR(10) PK
+subcategory VARCHAR(30)
+Campaign
+--------
+cf_id INTEGER PK
+contact_id INTEGER FK - Contacts.contact_id
+company_name VARCHAR(60)
+description TEXT
+goal FLOAT
+pledged FLOAT
+outcome VARCHAR(30)
+backers_count INTEGER
+country VARCHAR(10)
+currency VARCHAR(10)
+launched_date DATE
+end_date DATE
+category_id VARCHAR(30) FK >- category.category_id
+subcategory_id VARCHAR(30) FK >- subcategory.subcategory_id
